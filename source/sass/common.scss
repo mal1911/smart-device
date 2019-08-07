@@ -1,0 +1,35 @@
+body {
+  margin: 0;
+  padding: 0;
+  min-width: $mobile-min-width;
+  background-color: $color-main;
+  color: $color-text;
+  font-size: 16px;
+  line-height: 22px;
+
+  @include font-pt-mono-regular();
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.visually-hidden {
+  position: absolute;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  margin: -1px;
+  padding: 0;
+  width: 1px;
+  height: 1px;
+  border: 0;
+}
+
+.sprite {
+  display: none;
+}

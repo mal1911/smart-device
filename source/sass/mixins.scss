@@ -1,0 +1,44 @@
+//1920
+@mixin media-desktop {
+  @media (max-width: $desktop-max-width) {
+    @content;
+  }
+}
+//1023
+@mixin media-tablet {
+  @media (max-width: $tablet-max-width) {
+    @content;
+  }
+}
+//767
+@mixin media-mobile {
+  @media (max-width: $mobile-max-width) {
+    @content;
+  }
+}
+
+@mixin retina {
+  @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+    @content;
+  }
+}
+
+@mixin font-roboto-condensed-regular {
+  font-weight: 400;
+  font-family: $font-roboto-condensed;
+}
+
+@mixin font-roboto-condensed-bold {
+  font-weight: 700;
+  font-family: $font-roboto-condensed;
+}
+
+@mixin font-roboto-medium {
+  font-weight: 500;
+  font-family: $font-roboto;
+}
+
+@mixin font-pt-mono-regular {
+  font-weight: 400;
+  font-family: $font-pt-mono;
+}
