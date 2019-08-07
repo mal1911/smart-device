@@ -1,18 +1,18 @@
 //1920
 @mixin media-desktop {
-  @media (max-width: $desktop-max-width) {
+  @media (min-width: $desktop-min-width) and (max-width: $desktop-max-width) {
     @content;
   }
 }
 //1023
 @mixin media-tablet {
-  @media (max-width: $tablet-max-width) {
+  @media (min-width: $tablet-min-width) and (max-width: $tablet-max-width) {
     @content;
   }
 }
 //767
 @mixin media-mobile {
-  @media (max-width: $mobile-max-width) {
+  @media (min-width: $mobile-min-widthh) and (max-width: $mobile-max-width) {
     @content;
   }
 }
@@ -41,4 +41,9 @@
 @mixin font-pt-mono-regular {
   font-weight: 400;
   font-family: $font-pt-mono;
+}
+
+@mixin ul-reset {
+  padding-left: 0;
+  list-style: none;
 }
