@@ -22,3 +22,36 @@
   }
 }
 
+@include media-tablet {
+  .button {
+    @include font-roboto-condensed-bold();
+
+    font-size: 14px;
+    line-height: 16px;
+
+    text-align: center;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: $color-white;
+    border: 1px solid $color-white;
+    box-sizing: border-box;
+    border-radius: 5px;
+  }
+}
+
+@include media-mobile {
+  .button {
+    @include font-roboto-condensed-bold();
+
+    font-size: 14px;
+    line-height: 16px;
+
+    text-align: center;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: $color-white;
+    border: 1px solid $color-white;
+    box-sizing: border-box;
+    border-radius: 5px;
+  }
+}

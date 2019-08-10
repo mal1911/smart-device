@@ -35,6 +35,7 @@
     height: 802px;
     z-index: -1;
     background-image: url("../img/background-desktop.svg");
+    background-size: contain;
     background-repeat: no-repeat;
     content: "";
   }
@@ -103,4 +104,261 @@
   transform: rotate(-90deg);
   background-color: transparent;
   border: none;
+}
+
+@include media-desktop {
+  .motivation {
+    &::before {
+      left: 0;
+      top: 0;
+      min-height: 46.57vw;
+    }
+  }
+
+  .motivation .container {
+    padding-left: 12.97vw;
+    padding-right: 10.42vw;
+
+    &::before {
+      left: 3.65vw;
+      top: -2.03vw;
+      width: 96.35vw;
+      height: 41.77vw;
+    }
+  }
+
+  .motivation__header {
+    font-size: 4.17vw;
+    line-height: 4.89vw;
+    margin-top: 10.42vw;
+    margin-bottom: 0;
+  }
+
+  .motivation__text {
+    font-size: 1.15vw;
+    line-height: 1.77vw;
+    width: 33.85vw;
+    margin-left: 5.05vw;
+    margin-top: 1.35vw;
+    margin-bottom: 0;
+
+    &::before {
+      top: 0.83vw;
+      left: -4.79vw;
+      width: 3.44vw;
+      height: 0.1vw;
+    }
+  }
+
+  .motivation__button {
+    margin-top: 2.24vw;
+    margin-left: 5.05vw;
+    border: 0.05vw solid $color-blue;
+    padding: 0.89vw 2.39vw;
+    font-size: 0.83vw;
+    line-height: 0.99vw;
+  }
+
+  .motivation__image {
+    left: 54.17vw;
+    top: 7.55vw;
+    width: 36.72vw;
+    height: 26.82vw;
+  }
+
+  .motivation__up {
+    margin-top: 6.93vw;
+    margin-bottom: 6.56vw;
+    margin-left: -2.19vw;
+    font-size: 0.73vw;
+    line-height: 0.83vw;
+  }
+}
+
+@include media-tablet {
+  .motivation {
+    &::before {
+      min-height: 686px;
+      background-image: url("../img/background-tablet@1x.png");
+
+      @include retina {
+        background-image: url("../img/background-tablet@2x.png");
+      }
+    }
+  }
+
+  .motivation .container {
+    padding-left: 89px;
+    padding-right: 145px;
+
+    &::before {
+      left: 0;
+      top: -94px;
+      width: 770px;
+      height: 563px;
+      background-image: url("../img/background-tablet.svg");
+    }
+  }
+
+  .motivation__header {
+    @include font-roboto-condensed-bold();
+    font-size: 60px;
+    line-height: 70px;
+    letter-spacing: 0.07em;
+    text-transform: uppercase;
+    margin-top: 95px;
+    margin-bottom: 0;
+    color: $color-white;
+  }
+
+  .motivation__text {
+    @include font-pt-mono-regular();
+    position: relative;
+    font-size: 18px;
+    line-height: 156.8%;
+    width: 490px;
+    color: $color-white;
+    margin-left: 50px;
+    margin-top: 28px;
+    margin-bottom: 0;
+
+    &::before {
+      position: absolute;
+      top: 16px;
+      left: -47px;
+      width: 33px;
+      height: 2px;
+      content: "";
+      background-color: $color-white;
+    }
+  }
+
+  .motivation__button {
+    margin-top: 55px;
+    margin-left: 50px;
+    padding: 17px 31px;
+    margin-bottom: 162px;
+  }
+
+  .motivation__image {
+    position: absolute;
+    left: 511px;
+    top: 19px;
+    width: 260px;
+    height: 340px;
+  }
+
+  .motivation__up {
+    display: none;
+  }
+}
+
+@include media-mobile {
+  .motivation {
+    &::before {
+      position: absolute;
+      left: 0;
+      top: 0;
+      z-index: -1;
+      min-height: 875px;
+      width: 100%;
+      background-color: $color-motivation;
+      background-image: url("../img/background-desktop@1x.png");
+      background-position: top center;
+      background-size: 100%;
+      background-repeat: no-repeat;
+      content: "";
+
+      @include retina {
+        background-image: url("../img/background-desktop@2x.png");
+      }
+    }
+  }
+
+  .motivation .container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding-left: 249px;
+    padding-right: 200px;
+
+    &::before {
+      position: absolute;
+      left: 70px;
+      top: -39px;
+      width: 1850px;
+      height: 802px;
+      z-index: -1;
+      background-image: url("../img/background-desktop.svg");
+      background-size: contain;
+      background-repeat: no-repeat;
+      content: "";
+    }
+  }
+
+  .motivation__header {
+    @include font-roboto-condensed-bold();
+    font-size: 80px;
+    line-height: 94px;
+    letter-spacing: 0.07em;
+    text-transform: uppercase;
+    margin-top: 200px;
+    margin-bottom: 0;
+    color: $color-white;
+  }
+
+  .motivation__text {
+    @include font-pt-mono-regular();
+    position: relative;
+    font-size: 22px;
+    line-height: 34px;
+    width: 650px;
+    color: $color-white;
+    margin-left: 97px;
+    margin-top: 26px;
+    margin-bottom: 0;
+
+    &::before {
+      position: absolute;
+      top: 16px;
+      left: -92px;
+      width: 66px;
+      height: 2px;
+      content: "";
+      background-color: $color-white;
+    }
+  }
+
+  .motivation__button {
+    margin-top: 43px;
+    margin-left: 97px;
+    background-color: $color-blue;
+    border: 1px solid $color-blue;
+    padding: 17px 46px;
+    font-size: 16px;
+    line-height: 19px;
+  }
+
+  .motivation__image {
+    position: absolute;
+    left: 1040px;
+    top: 145px;
+    width: 705px;
+    height: 515px;
+  }
+
+  .motivation__up {
+    margin-top: 133px;
+    margin-bottom: 126px;
+    margin-left: -42px;
+    @include font-pt-mono-regular();
+    font-size: 14px;
+    line-height: 16px;
+    color: $color-white;
+    opacity: 0.5;
+    transform: rotate(-90deg);
+    background-color: transparent;
+    border: none;
+  }
 }

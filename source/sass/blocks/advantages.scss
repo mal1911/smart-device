@@ -16,6 +16,7 @@
     height: 1346px;
     z-index: 0;
     background-image: url("../img/advantages-desktop.svg");
+    background-size: contain;
     background-repeat: no-repeat;
     content: "";
   }
@@ -105,4 +106,256 @@
 
 .advantages__item:hover .advantages__text {
   color: $color-white;
+}
+
+@include media-desktop {
+  .advantages .container {
+    padding-left: 19.53vw;
+    padding-right: 19.53vw;
+
+    &::before {
+      left: 0;
+      top: -1.35vw;
+      width: 100vw;
+      height: 70.1vw;
+    }
+  }
+
+  .advantages__list {
+    margin-top: 5.99vw;
+  }
+
+  .advantages__item {
+    width: 26.69vw;
+    height: 15.52vw;
+    border: 0.05vw solid $color-border;
+    border-left: 0.16vw $color-blue solid;
+    padding-left: 2.19vw;
+    padding-right: 2.19vw;
+    margin-bottom: 1.61vw;
+  }
+
+  .advantages__item svg {
+    margin-bottom: 0;
+  }
+
+  .advantages__item--stopwatch svg {
+    width: 1.51vw;
+    height: 1.82vw;
+  }
+
+  .advantages__item--hired svg {
+    width: 1.82vw;
+    height: 1.82vw;
+  }
+
+  .advantages__item--detective svg {
+    width: 1.88vw;
+    height: 1.61vw;
+  }
+
+  .advantages__item--tag svg {
+    width: 1.82vw;
+    height: 1.82vw;
+  }
+
+  .advantages__title {
+    font-size: 1.25vw;
+    line-height: 1.78vw;
+    margin-bottom: 0;
+    margin-top: 1.04vw;
+  }
+
+  .advantages__text {
+    font-size: 0.83vw;
+    line-height: 1.14vw;
+    margin-bottom: 0;
+    margin-top: 0.83vw;
+  }
+}
+
+@include media-tablet {
+  .advantages .container {
+    padding-left: 25px;
+    padding-right: 25px;
+
+    &::before {
+      left: 211px;
+      top: 91px;
+      width: 559px;
+      height: 873px;
+      background-image: url("../img/advantages-tablet.svg");
+    }
+  }
+
+  .advantages__list {
+    margin-top: 54px;
+  }
+
+  .advantages__item {
+    width: 345px;
+    height: 306px;
+    border: 1px solid $color-border;
+    border-left: 3px $color-blue solid;
+    padding-left: 25px;
+    padding-right: 20px;
+    margin-bottom: 30px;
+  }
+
+  .advantages__item:nth-child(3),
+  .advantages__item:nth-child(4) {
+    height: 233px;
+  }
+
+  .advantages__item svg {
+    margin-top: 24px;
+    margin-bottom: 0;
+  }
+
+  .advantages__item--stopwatch svg {
+    width: 29px;
+    height: 35px;
+  }
+
+  .advantages__item--hired svg {
+    width: 35px;
+    height: 35px;
+  }
+
+  .advantages__item--detective svg {
+    width: 36px;
+    height: 31px;
+  }
+
+  .advantages__item--tag svg {
+    width: 35px;
+    height: 35px;
+  }
+
+  .advantages__title {
+    font-size: 24px;
+    line-height: 34px;
+    margin-bottom: 0;
+    margin-top: 7px;
+  }
+
+  .advantages__text {
+    font-size: 16px;
+    line-height: 22px;
+    margin-bottom: 0;
+    margin-top: 8px;
+  }
+}
+
+@include media-mobile {
+  .advantages {
+    background-color: $color-white;
+  }
+
+  .advantages .container {
+    position: relative;
+    display: flex;
+    padding-left: 375px;
+    padding-right: 375px;
+
+    &::before {
+      position: absolute;
+      left: 0;
+      top: -26px;
+      width: 1920px;
+      height: 1346px;
+      z-index: 0;
+      background-image: url("../img/advantages-desktop.svg");
+      background-size: contain;
+      background-repeat: no-repeat;
+      content: "";
+    }
+  }
+
+  .advantages__list {
+    @include ul-reset();
+    margin-top: 115px;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: flex-start;
+    justify-content: space-between;
+  }
+
+  .advantages__item {
+    position: relative;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: 570px;
+    height: 298px;
+    border: 1px solid $color-border;
+    border-left: 3px $color-blue solid;
+    padding-left: 42px;
+    padding-right: 42px;
+    margin-bottom: 31px;
+    background-color: $color-white;
+  }
+
+  .advantages__item:hover {
+    background-color: $color-blue;
+  }
+
+  .advantages__item svg {
+    fill: $color-blue;
+    margin-top: 40px;
+    margin-bottom: 0;
+  }
+
+  .advantages__item--stopwatch svg {
+    width: 29px;
+    height: 35px;
+  }
+
+  .advantages__item--hired svg {
+    width: 35px;
+    height: 35px;
+  }
+
+  .advantages__item--detective svg {
+    width: 36px;
+    height: 31px;
+  }
+
+  .advantages__item--tag svg {
+    width: 35px;
+    height: 35px;
+  }
+
+  .advantages__item:hover svg {
+    fill: $color-white;
+  }
+
+  .advantages__title {
+    @include font-roboto-condensed-regular();
+    color: $color-blue;
+    font-size: 24px;
+    line-height: 34px;
+    margin-bottom: 0;
+    margin-top: 20px;
+  }
+
+  .advantages__item:hover .advantages__title {
+    color: $color-white;
+  }
+
+  .advantages__text {
+    @include font-pt-mono-regular();
+    color: $color-text;
+    font-size: 16px;
+    line-height: 22px;
+    margin-bottom: 0;
+    margin-top: 16px;
+  }
+
+  .advantages__item:hover .advantages__text {
+    color: $color-white;
+  }
+
 }

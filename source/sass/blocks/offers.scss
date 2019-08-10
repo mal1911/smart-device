@@ -65,3 +65,130 @@
 .offers__list img {
   opacity: 0.3;
 }
+
+@include media-desktop {
+  .offers .container {
+    padding-left: 19.64vw;
+    padding-right: 19.64vw;
+  }
+
+  .offers__header {
+    margin-top: 4.84vw;
+    margin-bottom: 0;
+    font-size: 1.88vw;
+    line-height: 2.66vw;
+  }
+
+  .offers__list {
+    margin-top: 2.5vw;
+    margin-bottom: 6.61vw;
+  }
+
+  .offers__list li {
+    width: 19.27vw;
+    height: 32.29vw;
+  }
+
+  .offers__list li::after {
+    right: 0;
+    bottom: 0;
+    width: 3.28vw;
+    height: 3.28vw;
+  }
+
+  .offers__list h3 {
+    left: 2.19vw;
+    top: 1.51vw;
+    width: 8.33vw;
+    font-size: 1.04vw;
+    line-height: 1.56vw;
+  }
+}
+
+@include media-tablet {
+  .offers .container {
+    padding-left: 25px;
+    padding-right: 10px;
+  }
+
+  .offers__header {
+    margin-top: 48px;
+    margin-bottom: 0;
+    width: 615px;
+    font-size: 32px;
+    line-height: 140.62%;
+  }
+
+  .offers__list {
+    @include ul-reset();
+    margin-top: 51px;
+    margin-bottom: 30px;
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+
+  .offers__list li {
+    width: 715px;
+    height: 256px;
+    margin-bottom: 47px;
+  }
+
+  .offers__list li::after {
+    right: 0;
+    bottom: 0;
+    width: 63px;
+    height: 63px;
+  }
+
+  .offers__list h3 {
+    left: 44px;
+    top: 19px;
+    width: 160px;
+    font-size: 20px;
+    line-height: 30px;
+  }
+}
+
+@include media-mobile {
+  .offers .container {
+    padding-left: 25px;
+    padding-right: 10px;
+  }
+
+  .offers__header {
+    margin-top: 48px;
+    margin-bottom: 0;
+    width: 615px;
+    font-size: 32px;
+    line-height: 140.62%;
+  }
+
+  .offers__list {
+    @include ul-reset();
+    margin-top: 51px;
+    margin-bottom: 127px;
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+
+  .offers__list li {
+    width: 715px;
+    height: 256px;
+    margin-bottom: 47px;
+  }
+
+  .offers__list li::after {
+    right: 0;
+    bottom: 0;
+    width: 63px;
+    height: 63px;
+  }
+
+  .offers__list h3 {
+    left: 44px;
+    top: 19px;
+    width: 160px;
+    font-size: 20px;
+    line-height: 30px;
+  }
+}

@@ -1,0 +1,53 @@
+.social {
+  display: flex;
+
+  @include ul-reset();
+}
+
+.social__item:not(:last-child) {
+  margin-right: 15px;
+}
+
+.social__item svg {
+  width: 27px;
+  height: 27px;
+}
+
+@include media-desktop {
+  .social__item:not(:last-child) {
+    margin-right: 0.78vw;
+  }
+
+  .social__item svg {
+    width: 1.41vw;
+    height: 1.41vw;
+  }
+}
+
+@include media-tablet {
+  .social__item:not(:last-child) {
+    margin-right: 15px;
+  }
+
+  .social__item svg {
+    width: 27px;
+    height: 27px;
+  }
+}
+
+@include media-mobile {
+  .social {
+    display: flex;
+
+    @include ul-reset();
+  }
+
+  .social__item:not(:last-child) {
+    margin-right: 15px;
+  }
+
+  .social__item svg {
+    width: 27px;
+    height: 27px;
+  }
+}

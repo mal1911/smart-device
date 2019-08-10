@@ -1,0 +1,166 @@
+.site-parts {
+  margin-left: 129px;
+}
+
+.site-parts__header {
+  margin-top: 0;
+  margin-bottom: 10px;
+  margin-left: 78px;
+
+  font-size: 15px;
+  line-height: 16px;
+  color: $color-footer-text;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+
+  @include font-roboto-condensed-regular();
+}
+
+.site-parts__list {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  height: 130px;
+  margin-top: 24px;
+
+  @include ul-reset();
+}
+
+.site-parts__item {
+  margin-left: 76px;
+}
+
+.site-parts__item:nth-child(4) {
+  padding-bottom: 20px;
+}
+
+.site-parts__link {
+  display: block;
+
+  font-size: 15px;
+  line-height: 25px;
+  color: $color-footer-text;
+
+  opacity: 0.5;
+
+  @include font-pt-mono-regular();
+}
+
+@include media-desktop {
+  .site-parts {
+    margin-left: 6.72vw;
+  }
+
+  .site-parts__header {
+    margin-top: 0;
+    margin-bottom: 0.52vw;
+    margin-left: 4.06vw;
+
+    font-size: 0.78vw;
+    line-height: 0.83vw;
+  }
+
+  .site-parts__list {
+    height: 6.77vw;
+    margin-top: 1.25vw;
+  }
+
+  .site-parts__item {
+    margin-left: 3.96vw;
+  }
+
+  .site-parts__item:nth-child(4) {
+    padding-bottom: 1.04vw;
+  }
+
+  .site-parts__link {
+    font-size: 0.78vw;
+    line-height: 1.3vw;
+  }
+}
+
+@include media-tablet {
+  .site-parts {
+    margin-left: 25px;
+  }
+
+  .site-parts__header {
+    margin-left: 0;
+    margin-top: 28px;
+    margin-bottom: 0;
+
+    font-size: 15px;
+    line-height: 16px;
+  }
+
+  .site-parts__list {
+    flex-wrap: nowrap;
+    height: auto;
+    margin-top: 24px;
+    margin-bottom: 24px;
+  }
+
+  .site-parts__item {
+    margin-left: 0;
+  }
+
+  .site-parts__item:nth-child(4) {
+    padding-bottom: 0;
+  }
+
+  .site-parts__link {
+    font-size: 15px;
+    line-height: 25px;
+  }
+
+}
+
+@include media-mobile {
+  .site-parts {
+    margin-left: 129px;
+  }
+
+  .site-parts__header {
+    margin-top: 0;
+    margin-bottom: 10px;
+    margin-left: 78px;
+
+    font-size: 15px;
+    line-height: 16px;
+    color: $color-footer-text;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+
+    @include font-roboto-condensed-regular();
+  }
+
+  .site-parts__list {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    height: 130px;
+    margin-top: 24px;
+
+    @include ul-reset();
+  }
+
+  .site-parts__item {
+    margin-left: 76px;
+  }
+
+  .site-parts__item:nth-child(4) {
+    padding-bottom: 20px;
+  }
+
+  .site-parts__link {
+    display: block;
+
+    font-size: 15px;
+    line-height: 25px;
+    color: $color-footer-text;
+
+    opacity: 0.5;
+
+    @include font-pt-mono-regular();
+  }
+}
