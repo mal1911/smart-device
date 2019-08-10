@@ -4,8 +4,8 @@ body {
   min-width: $mobile-min-width;
   background-color: $color-main;
   color: $color-text;
-  font-size: 16px;
-  line-height: 22px;
+  font-size: 0.83vw;
+  line-height: 1.15vw;
 
   @include font-pt-mono-regular();
 }

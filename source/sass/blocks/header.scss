@@ -1,4 +1,4 @@
-.header {
+.header .container {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -6,5 +6,161 @@
   padding-top: 29px;
   padding-bottom: 27px;
   padding-right: 257px;
-  background-color: $color-header;
+}
+
+@include media-desktop {
+  .header .container {
+    padding-left: 13.125vw;
+    padding-top: 1.5104vw;
+    padding-bottom: 1.4062vw;
+    padding-right: 13.3854vw;
+  }
+}
+
+@include media-tablet {
+  .header .container {
+    padding-left: 3.25vw;
+    padding-top: 2.6vw;
+    padding-bottom: 2.6vw;
+    padding-right: 0;
+  }
+}
+
+@include media-mobile {
+  .header .container {
+    padding-left: 4.69vw;
+    padding-top: 3.75vw;
+    padding-bottom: 3.75vw;
+    padding-right: 0;
+  }
+}
+
+.header__logo img {
+  width: 202px;
+  height: 52px;
+}
+
+@include media-desktop {
+  .header__logo img {
+    width: 10.52vw;
+    height: 2.7vw;
+  }
+}
+
+@include media-tablet {
+  .header__logo img {
+    width: 26.3vw;
+    height: 6.77vw;
+  }
+}
+
+@include media-mobile {
+  .header__logo img{
+    width: 11.87vw;
+    height: 11.87vw;
+  }
+}
+
+.header__nav {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  position: relative;
+
+  &::before,
+  &::after {
+    position: absolute;
+    left: -341px;
+    width: 37px;
+    height: 1px;
+    content: "";
+    background-color: $color-white;
+  }
+
+  &::before {
+    top: 21px;
+  }
+
+  &::after {
+    top: 33px;
+  }
+}
+
+@include media-desktop {
+  .header__nav {
+    &::before,
+    &::after {
+      left: -17.76vw;
+      width: 1.92vw;
+      height: 0.05vw;
+    }
+
+    &::before {
+      top: 1.09vw;
+    }
+
+    &::after {
+      top: 1.71vw;
+    }
+  }
+}
+
+@include media-tablet {
+  .header__nav {
+    &::before,
+    &::after {
+      left: -6.12vw;
+      width: 4.82vw;
+      height: 0.13vw;
+    }
+
+    &::before {
+      top: 1.69vw;
+    }
+
+    &::after {
+      top: 3.25vw;
+    }
+  }
+}
+
+@include media-mobile {
+  .header__nav {
+    &::before,
+    &::after {
+      left: -14.38vw;
+      width: 11.56vw;
+      height: 0.31vw;
+    }
+
+    &::before {
+      top: 4.69vw;
+    }
+
+    &::after {
+      top: 8.44vw;
+    }
+  }
+}
+
+.header__button {
+  padding: 13px 26px;
+}
+
+@include media-desktop {
+  .header__button {
+    padding: 0.68vw 1.35vw;
+  }
+}
+
+@include media-tablet {
+  .header__button {
+    display: none;
+  }
+}
+
+@include media-mobile {
+  .header__button {
+    display: none;
+  }
 }

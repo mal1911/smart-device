@@ -1,0 +1,106 @@
+.motivation {
+  &::before {
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: -1;
+    min-height: 875px;
+    width: 100%;
+    background-color: $color-motivation;
+    background-image: url("../img/background-desktop@1x.png");
+    background-position: top center;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    content: "";
+
+    @include retina {
+      background-image: url("../img/background-desktop@2x.png");
+    }
+  }
+}
+
+.motivation .container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding-left: 249px;
+  padding-right: 200px;
+
+  &::before {
+    position: absolute;
+    left: 70px;
+    top: -39px;
+    width: 1850px;
+    height: 802px;
+    z-index: -1;
+    background-image: url("../img/background-desktop.svg");
+    background-repeat: no-repeat;
+    content: "";
+  }
+}
+
+.motivation__header {
+  @include font-roboto-condensed-bold();
+  font-size: 80px;
+  line-height: 94px;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+  margin-top: 200px;
+  margin-bottom: 0;
+  color: $color-white;
+}
+
+.motivation__text {
+  @include font-pt-mono-regular();
+  position: relative;
+  font-size: 22px;
+  line-height: 34px;
+  width: 650px;
+  color: $color-white;
+  margin-left: 97px;
+  margin-top: 26px;
+  margin-bottom: 0;
+
+  &::before {
+    position: absolute;
+    top: 16px;
+    left: -92px;
+    width: 66px;
+    height: 2px;
+    content: "";
+    background-color: $color-white;
+  }
+}
+
+.motivation__button {
+  margin-top: 43px;
+  margin-left: 97px;
+  background-color: $color-blue;
+  border: 1px solid $color-blue;
+  padding: 17px 46px;
+  font-size: 16px;
+  line-height: 19px;
+}
+
+.motivation__image {
+  position: absolute;
+  left: 1040px;
+  top: 145px;
+  width: 705px;
+  height: 515px;
+}
+
+.motivation__up {
+  margin-top: 133px;
+  margin-bottom: 126px;
+  margin-left: -42px;
+  @include font-pt-mono-regular();
+  font-size: 14px;
+  line-height: 16px;
+  color: $color-white;
+  opacity: 0.5;
+  transform: rotate(-90deg);
+  background-color: transparent;
+  border: none;
+}

@@ -1,3 +1,4 @@
+
 .container {
   box-sizing: border-box;
   margin: 0 auto;
@@ -5,14 +6,14 @@
   max-width: $desktop-max-width;
 }
 
-@media (min-width: 1920px) {
+@media (min-width: $desktop-max-width) {
   .container {
     margin: 0 auto;
-    width: 1920px;
+    width: $desktop-max-width;
   }
 }
 
-@media (min-width: 320px) and (max-width: 1920px) {
+@media (min-width: $mobile-min-width) and (max-width: $desktop-max-width) {
     .container {
     width: 100%;
   }
