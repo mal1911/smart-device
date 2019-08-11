@@ -11,7 +11,20 @@
 .social__item svg {
   width: 27px;
   height: 27px;
+
+  cursor: pointer;
 }
+
+.social__item a:hover {
+  opacity: 0.6;
+}
+
+.social__item a:focus,
+.social__item a:active {
+  outline: none;
+  opacity: 0.3;
+}
+
 
 @include media-desktop {
   .social__item:not(:last-child) {
@@ -26,20 +39,18 @@
 
 @include media-tablet {
   .social__item:not(:last-child) {
-    margin-right: 15px;
+    margin-right: 1.95vw; //15px;
   }
 
   .social__item svg {
-    width: 27px;
-    height: 27px;
+    width: 3.52vw; //27px;
+    height: 3.52vw; //27px;
   }
 }
 
 @include media-mobile {
   .social {
-    display: flex;
-
-    @include ul-reset();
+    margin-top: 19px;
   }
 
   .social__item:not(:last-child) {

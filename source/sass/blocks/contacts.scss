@@ -26,6 +26,10 @@
   @include ul-reset();
 }
 
+.contacts__item {
+  opacity: 0.5;
+}
+
 .contacts__item,
 .contacts__link {
   display: block;
@@ -34,9 +38,19 @@
   line-height: 25px;
   color: $color-footer-text;
 
-  opacity: 0.5;
-
   @include font-pt-mono-regular();
+}
+
+.contacts__link {
+  &:hover {
+    opacity: 0.8;
+  }
+
+  &:focus,
+  &:active {
+    outline: none;
+    opacity: 0.3;
+  }
 }
 
 @include media-desktop {
@@ -67,68 +81,58 @@
 @include media-tablet {
   .contacts {
     flex-shrink: 0;
-    margin-left: 143px;
+    margin-left: 18.62vw; //143px;
   }
 
   .contacts__header {
-    margin-top: 29px;
-    margin-bottom: 10px;
+    margin-top: 3.78vw; //29px;
+    margin-bottom: 1.3vw; //10px;
 
-    font-size: 15px;
-    line-height: 16px;
+    font-size: 1.95vw; //15px;
+    line-height: 2.08vw; //16px;
   }
 
   .contacts__list {
-    height: 130px;
-    margin-top: 24px;
+    height: 16.93vw; //130px;
+    margin-top: 3.13vw; //24px;
   }
 
   .contacts__item,
   .contacts__link {
-    font-size: 15px;
-    line-height: 25px;
+    font-size: 1.95vw; //15px;
+    line-height: 3.26vw; //25px;
   }
 }
 
 @include media-mobile {
   .contacts {
+    position: relative;
+
     flex-shrink: 0;
-    margin-left: 424px;
+    margin-left: 0;
+    padding-right: 20px;
+    padding-left: 14px;
+
+    border-top: 1px solid $color-footer-border;
   }
 
   .contacts__header {
-    margin-top: 0;
-    margin-bottom: 10px;
+    margin-top: 27px;
+    margin-bottom: 27px;
 
     font-size: 15px;
     line-height: 16px;
-    color: $color-footer-text;
-    text-transform: uppercase;
-    letter-spacing: 0.05em;
-
-    @include font-roboto-condensed-regular();
   }
 
   .contacts__list {
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    height: 130px;
-    margin-top: 24px;
-
-    @include ul-reset();
+    height: auto;
+    margin-top: 32px;
+    margin-bottom: 26px;
   }
 
   .contacts__item,
   .contacts__link {
-    display: block;
-
     font-size: 15px;
     line-height: 25px;
-    color: $color-footer-text;
-
-    opacity: 0.5;
-
-    @include font-pt-mono-regular();
   }
 }

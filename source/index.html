@@ -58,7 +58,10 @@
       <h1 class="motivation__header">Печатные платы</h1>
       <h2 class="visually-hidden">Получить консультацию</h2>
       <p class="motivation__text">производство и монтаж, поставка комплектующих, блоков и модулей</p>
-      <a href="#" class="button motivation__button">Получить бесплатную консультацию</a>
+      <a href="#" class="button motivation__button">
+        <span class="motivation__desktop-text">Получить бесплатную консультацию</span>
+        <span class="motivation__mobile-text">Бесплатная консультация</span>
+      </a>
       <button class="motivation__up">Скролл вниз</button>
       <picture>
         <source type="image/webp" media="(min-width: 1024px)"
@@ -77,7 +80,7 @@
     <div class="container">
       <h2 class="visually-hidden">Предложения</h2>
       <ul class="advantages__list">
-        <li class="advantages__item advantages__item--stopwatch">
+        <li class="advantages__item advantages__item&#45;&#45;stopwatch">
           <svg width="29" height="35">
             <use xlink:href="#icon-stopwatch"></use>
           </svg>
@@ -87,7 +90,7 @@
             заказы плат и комплектующих в самые короткие сроки.
           </p>
         </li>
-        <li class="advantages__item advantages__item--hired">
+        <li class="advantages__item advantages__item&#45;&#45;hired">
           <svg width="35" height="35">
             <use xlink:href="#icon-hired"></use>
           </svg>
@@ -97,7 +100,7 @@
             Сотрудничество с такими компаниями обеспичивает хорошее качество нашей продукции.
           </p>
         </li>
-        <li class="advantages__item advantages__item--detective">
+        <li class="advantages__item advantages__item&#45;&#45;detective">
           <svg width="36" height="31">
             <use xlink:href="#icon-detective"></use>
           </svg>
@@ -106,7 +109,7 @@
             По желанию клиента мы обеспечиваем полную конфеденциальность.
           </p>
         </li>
-        <li class="advantages__item advantages__item--tag">
+        <li class="advantages__item advantages__item&#45;&#45;tag">
           <svg width="35" height="35">
             <use xlink:href="#icon-tag"></use>
           </svg>
@@ -222,7 +225,7 @@
       <p class="footer__desctiption">1999-2018 SD Service Devices</p>
       <ul class="footer__social social">
         <li class="social__item">
-          <a href="#" class="social__link social__link--facebook">
+          <a href="#" class="social__link social__link&#45;&#45;facebook">
             <svg width="27" height="27">
               <use xlink:href="#icon-facebook"></use>
             </svg>
@@ -230,7 +233,7 @@
           </a>
         </li>
         <li class="social__item">
-          <a href="#" class="social__link social__link--ok">
+          <a href="#" class="social__link social__link&#45;&#45;ok">
             <svg width="27" height="27">
               <use xlink:href="#icon-ok"></use>
             </svg>
@@ -238,7 +241,7 @@
           </a>
         </li>
         <li class="social__item">
-          <a href="#" class="social__link social__link--vk">
+          <a href="#" class="social__link social__link&#45;&#45;vk">
             <svg width="27" height="27">
               <use xlink:href="#icon-vk"></use>
             </svg>
@@ -249,6 +252,7 @@
     </div>
     <nav class="footer__center site-parts">
       <h3 class="site-parts__header">Разделы сайта</h3>
+      <button class="toggle toggle&#45;&#45;closed"></button>
       <ul class="site-parts__list">
         <li class="site-parts__item">
           <a href="#" class="site-parts__link">О компании</a>
@@ -275,6 +279,7 @@
     </nav>
     <div class="footer__last contacts">
       <h3 class="contacts__header">Наш офис</h3>
+      <button class="toggle toggle&#45;&#45;closed"></button>
       <ul class="contacts__list">
         <li class="contacts__item">
           г. Мытищи, Олимпийский проспект, д.10
@@ -297,5 +302,22 @@
     <p class="info__text">Developed by wow studio</p>
   </div>
 </footer>
+<section class="modal">
+  <div class="modal__block">
+    <h2 class="modal__header">Закажите звонок</h2>
+    <p class="modal__text">Оставьте контакты, мы проконсультируем вас бесплатно в удобное время</p>
+    <form class="modal__form" action="https://echo.htmlacademy.ru" method="post">
+      <input type="text" required name="name" placeholder="Имя" autocomplete="off">
+      <input type="text" required name="phone" placeholder="Телефон" autocomplete="off">
+      <textarea name="question" placeholder="Ваш вопрос" autocomplete="off"></textarea>
+      <button type="submit">Отправить</button>
+      <input class="visually-hidden" id="consent-modal" type="checkbox" name="consent">
+      <label for="consent-modal">Я согласен на обработку персональных данных</label>
+    </form>
+    <button class="modal__close" type="button"><span class="visually-hidden">Закрыть</span></button>
+  </div>
+</section>
+<div class="overlay"></div>
+<script src="js/main.js"></script>
 </body>
 </html>
