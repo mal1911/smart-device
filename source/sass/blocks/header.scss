@@ -1,13 +1,5 @@
 .header {
-  background-color: $color-motivation;
-  background-image: url("../img/background-desktop@1x.png");
-  background-repeat: no-repeat;
-  background-position: top left;
-  background-size: cover;
-
-  @include retina {
-    background-image: url("../img/background-desktop@2x.png");
-  }
+  background-color: transparent;
 }
 
 .header .container {
@@ -67,26 +59,20 @@
     opacity: 0.6;
   }
 
-  &:focus,
   &:active {
-    outline: none;
     opacity: 0.3;
+  }
+
+  &:focus {
+    outline: none;
   }
 }
 
 @include media-tablet {
-  .header {
-    background-image: url("../img/background-tablet@1x.png");
-
-    @include retina {
-      background-image: url("../img/background-tablet@2x.png");
-    }
-  }
-
   .header .container {
     padding-top: 19px;
     padding-right: 24px;
-    padding-bottom: 10px;
+    padding-bottom: 4px;
     padding-left: 24px;
   }
 
@@ -106,21 +92,13 @@
   }
 
   .header__menu-button {
-    margin-top: -2px;
+    margin-top: -8px;
   }
 }
 
 @include media-mobile {
-  .header {
-    background-image: url("../img/background-mobile@1x.png");
-
-    @include retina {
-      background-image: url("../img/background-mobile@2x.png");
-    }
-  }
-
   .header .container {
-    padding-top: 16px;
+    padding-top: 5px;
     padding-right: 17px;
     padding-bottom: 0;
     padding-left: 17px;

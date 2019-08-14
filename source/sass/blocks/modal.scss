@@ -161,10 +161,12 @@
   opacity: 0.6;
 }
 
-.modal__form button:focus,
 .modal__form button:active {
-  outline: none;
   opacity: 0.3;
+}
+
+.modal__form button:focus {
+  outline: none;
 }
 
 

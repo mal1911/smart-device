@@ -64,9 +64,11 @@
     opacity: 0.8;
   }
 
-  &:focus,
-  &:active {
+  &:focus {
     outline: none;
+  }
+
+  &:active {
     opacity: 0.3;
   }
 }

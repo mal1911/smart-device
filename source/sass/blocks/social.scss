@@ -19,18 +19,20 @@
   opacity: 0.6;
 }
 
-.social__item a:focus,
-.social__item a:active {
+.social__item a:focus {
   outline: none;
-  opacity: 0.3;
 }
 
+.social__item a:active {
+  opacity: 0.3;
+}
 
 @include media-tablet {
   .social {
     margin-top: 12px;
     margin-right: 23px;
   }
+
   .social__item:not(:last-child) {
     margin-right: 15px;
   }

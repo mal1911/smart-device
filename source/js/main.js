@@ -84,7 +84,7 @@
       elementAboutText.insertAdjacentElement('beforeend', visibleElement);
     }
 
-    if (screen.width < 768) {
+    if (screen.width < 1024) {
       visibleElement.textContent = aboutText.slice(0, 237) + '..';
     } else {
       visibleElement.textContent = aboutText;
