@@ -1,5 +1,6 @@
 .site-parts {
-  margin-left: 129px;
+  flex-grow: 0;
+  flex-shrink: 0;
 }
 
 .site-parts__header {
@@ -16,22 +17,36 @@
   @include font-roboto-condensed-regular();
 }
 
+@media (max-width: 1600px) {
+  .site-parts__header {
+    margin-left: 15px;
+  }
+}
+
 .site-parts__list {
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
-  height: 130px;
+  height: 160px;
   margin-top: 24px;
+  margin-bottom: 0;
 
   @include ul-reset();
 }
 
 .site-parts__item {
+  max-width: 250px;
   margin-left: 76px;
 }
 
+@media (max-width: 1600px) {
+  .site-parts__item {
+    margin-left: 15px;
+  }
+}
+
 .site-parts__item:nth-child(4) {
-  padding-bottom: 20px;
+  padding-bottom: 40px;
 }
 
 .site-parts__link {
@@ -56,58 +71,25 @@
   }
 }
 
-@include media-desktop {
-  .site-parts {
-    margin-left: 6.72vw;
-  }
-
-  .site-parts__header {
-    margin-top: 0;
-    margin-bottom: 0.52vw;
-    margin-left: 4.06vw;
-
-    font-size: 0.78vw;
-    line-height: 0.83vw;
-  }
-
-  .site-parts__list {
-    height: 6.77vw;
-    margin-top: 1.25vw;
-  }
-
-  .site-parts__item {
-    margin-left: 3.96vw;
-  }
-
-  .site-parts__item:nth-child(4) {
-    padding-bottom: 1.04vw;
-  }
-
-  .site-parts__link {
-    font-size: 0.78vw;
-    line-height: 1.3vw;
-  }
-}
-
 @include media-tablet {
   .site-parts {
-    margin-left: 3.26vw; //25px;
+    flex-shrink: 1;
   }
 
   .site-parts__header {
-    margin-top: 3.65vw; //28px;
+    margin-top: 37px;
     margin-bottom: 0;
     margin-left: 0;
 
-    font-size: 1.95vw; //15px;
-    line-height: 2.08vw; //16px;
+    font-size: 15px;
+    line-height: 16px;
   }
 
   .site-parts__list {
     flex-wrap: nowrap;
     height: auto;
-    margin-top: 3.13vw; //24px;
-    margin-bottom: 3.13vw; //24px;
+    margin-top: 24px;
+    margin-bottom: 24px;
   }
 
   .site-parts__item {
@@ -119,8 +101,8 @@
   }
 
   .site-parts__link {
-    font-size: 1.95vw; //15px;
-    line-height: 3.26vw; //25px;
+    font-size: 15px;
+    line-height: 25px;
   }
 }
 
@@ -128,15 +110,16 @@
   .site-parts {
     position: relative;
 
-    margin-left: 0;
-    padding-right: 10px;
+    box-sizing: border-box;
+    width: 100%;
+    padding-right: 0;
     padding-left: 14px;
 
     border-top: 1px solid $color-footer-border;
   }
 
   .site-parts__header {
-    margin-top: 30px;
+    margin-top: 28px;
     margin-bottom: 27px;
     margin-left: 0;
 
@@ -147,6 +130,7 @@
   .site-parts__list {
     height: auto;
     margin-top: 10px;
+    padding-bottom: 14px;
   }
 
   .site-parts__item {

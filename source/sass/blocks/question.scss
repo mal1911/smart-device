@@ -1,5 +1,9 @@
 .question {
   background-color: $color-blue;
+  background-image: url("../img/question-desktop.svg");
+  background-repeat: no-repeat;
+  background-position: 175px -61px;
+  background-size: auto;
 }
 
 .question .container {
@@ -7,15 +11,16 @@
 
   display: flex;
   flex-direction: column;
-  padding-right: 377px;
-  padding-left: 969px;
+  padding-right: 0;
+  padding-left: 38%;
+
+  background-color: transparent;
 
   &::before {
     content: "";
     position: absolute;
-    top: 163px;
-    left: 350px;
-    z-index: 0;
+    top: 161px;
+    left: 110px;
 
     width: 511px;
     height: 288px;
@@ -30,24 +35,21 @@
       background-image: url("../img/question-desktop@2x.png");
     }
   }
+}
 
-  &::after {
-    content: "";
-    position: absolute;
-    top: -60px;
-    left: 175px;
-    z-index: 0;
+@media (max-width: 1600px) {
+  .question .container {
+    padding-left: 45%;
+  }
 
-    width: 1745px;
-    height: 765px;
-
-    background-image: url("../img/question-desktop.svg");
-    background-repeat: no-repeat;
-    background-size: contain;
+  .question .container::before {
+    left: 10px;
   }
 }
 
 .question__header {
+  z-index: 1;
+
   margin-top: 92px;
   margin-bottom: 0;
 
@@ -59,6 +61,8 @@
 }
 
 .question__text {
+  z-index: 1;
+
   margin-top: 10px;
   margin-left: 5px;
 
@@ -75,9 +79,11 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  width: 570px;
+  width: 559px;
   margin-top: 32px;
   margin-bottom: 113px;
+
+  background-color: $color-blue;
 }
 
 .question__form input[type="text"],
@@ -91,6 +97,7 @@
 
   background-color: #19baff; //$color-blue;
   border: none;
+  outline: none;
 }
 
 .question__form input[type="text"]::-webkit-input-placeholder,
@@ -200,196 +207,103 @@
   resize: none;
 }
 
-@include media-desktop {
-  .question .container {
-    padding-right: 19.64vw;
-    padding-left: 50.47vw;
-
-    &::before {
-      top: 8.49vw;
-      left: 18.23vw;
-
-      width: 26.61vw;
-      height: 15vw;
-    }
-
-    &::after {
-      top: -3.13vw;
-      left: 9.11vw;
-
-      width: 90.89vw;
-      height: 39.84vw;
-    }
-  }
-
-  .question__header {
-    margin-top: 4.79vw;
-    margin-bottom: 0;
-
-    font-size: 1.88vw;
-    line-height: 2.55vw;
-  }
-
-  .question__text {
-    margin-top: 0.52vw;
-    margin-left: 0.26vw;
-
-    font-size: 0.83vw;
-    line-height: 1.15vw;
-  }
-
-  .question__form {
-    width: 29.69vw;
-    margin-top: 1.67vw;
-    margin-bottom: 5.89vw;
-  }
-
-  .question__form input[type="text"],
-  .question__form textarea {
-    padding-left: 1.2vw;
-
-    font-size: 0.83vw;
-    line-height: 1.15vw;
-  }
-
-  .question__form input[type="text"] {
-    width: 14.06vw;
-    height: 2.6vw;
-  }
-
-  .question__form input[type="checkbox"] + label {
-    width: 11.61vw;
-    margin-top: 2.86vw;
-    margin-left: 0.52vw;
-
-    font-size: 0.73vw;
-    line-height: 0.83vw;
-
-    cursor: pointer;
-
-    &::before {
-      top: 0;
-      left: -1.72vw;
-
-      width: 0.83vw;
-      height: 0.83vw;
-    }
-  }
-
-  .question__form button {
-    margin-top: 2.4vw;
-    margin-left: 0.31vw;
-    padding: 0.68vw 4.11vw;
-
-    font-size: 0.73vw;
-    line-height: 0.83vw;
-
-    border: 0.05vw solid $color-white;
-    border-radius: 0.26vw;
-  }
-
-  .question__form textarea {
-    height: 8.02vw;
-    margin-top: 2.08vw;
-    padding-top: 0.73vw;
-  }
-}
-
 @include media-tablet {
+  .question {
+    background-image: none;
+  }
+
   .question .container {
-    padding-right: 1.3vw; //10px;
-    padding-left: 11.46vw; //88px;
+    padding-right: 0;
+    padding-left: 0;
 
     &::before {
-      display: none;
-    }
-
-    &::after {
       display: none;
     }
   }
 
   .question__header {
-    margin-top: 10.16vw; //78px;
+    margin-top: 78px;
     margin-bottom: 0;
+    margin-left: 88px;
 
-    font-size: 4.17vw; //32px;
+    font-size: 32px;
     line-height: 140.62%;
   }
 
   .question__text {
-    margin-top: 2.21vw; //17px;
-    margin-left: 0.65vw; //5px;
+    margin-top: 17px;
+    margin-left: 93px;
 
-    font-size: 2.08vw; //16px;
-    line-height: 2.86vw; //22px;
+    font-size: 16px;
+    line-height: 22px;
   }
 
   .question__form {
-    width: 77.21vw; //593px;
-    margin-top: 5.21vw; //40px;
-    margin-bottom: 13.54vw; //104px;
+    align-self: center;
+    width: 77%;
+    margin-top: 37px;
+    margin-bottom: 104px;
   }
 
   .question__form input[type="text"],
   .question__form textarea {
-    padding-left: 2.99vw; //23px;
+    padding-left: 23px;
 
-    font-size: 2.08vw; //16px;
-    line-height: 2.86vw; //22px;
+    font-size: 16px;
+    line-height: 22px;
   }
 
   .question__form input[type="text"] {
-    width: 36.33vw; //279px;
-    height: 6.51vw; //50px;
+    width: 279px;
+    height: 50px;
   }
 
   .question__form input[type="checkbox"] + label {
-    width: 30.6vw; //235px;
-    margin-top: 7.03vw; //54px;
-    margin-left: 1.3vw; //10px;
+    width: 235px;
+    margin-top: 54px;
+    margin-left: 10px;
 
-    font-size: 1.82vw; //14px;
-    line-height: 2.08vw; //16px;
+    font-size: 14px;
+    line-height: 16px;
 
     &::before {
       top: 0;
-      left: -4.3vw; //33px;
+      left: -33px;
 
-      width: 2.08vw; //16px;
-      height: 2.08vw; //16px;
+      width: 16px;
+      height: 16px;
     }
   }
 
   .question__form button {
-    margin-top: 5.73vw; //44px;
-    margin-left: 0.52vw; //4px;
-    padding: 1.82vw 10.94vw;
+    margin-top: 44px;
+    margin-left: 4px;
+    padding: 14px 84px;
 
-    font-size: 1.82vw; //14px;
-    line-height: 2.08vw; //16px;
+    font-size: 14px;
+    line-height: 16px;
 
-    border: 0.13vw solid $color-white;
-    border-radius: 0.65vw; //5px;
+    border: 1px solid $color-white;
+    border-radius: 5px;
   }
 
   .question__form textarea {
-    height: 20.96vw; //161px;
-    margin-top: 5.21vw; //40px;
-    padding-top: 1.82vw; //14px;
+    height: 161px;
+    margin-top: 40px;
+    padding-top: 14px;
   }
 }
 
 @include media-mobile {
+  .question {
+    background-image: none;
+  }
+
   .question .container {
     padding-right: 10px;
     padding-left: 14px;
 
     &::before {
-      display: none;
-    }
-
-    &::after {
       display: none;
     }
   }

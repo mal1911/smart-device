@@ -5,13 +5,14 @@
 .offers .container {
   display: flex;
   flex-direction: column;
-  padding-right: 377px;
-  padding-left: 377px;
+  padding-right: 123px;
+  padding-left: 123px;
 }
 
 .offers__header {
   margin-top: 93px;
   margin-bottom: 0;
+  margin-left: 10px;
 
   font-size: 36px;
   line-height: 51px;
@@ -23,13 +24,12 @@
 .offers__list {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: space-around;
   margin-top: 48px;
-  margin-bottom: 127px;
+  margin-bottom: 57px;
 
   @include ul-reset();
 }
-
 
 .offers__list li {
   position: relative;
@@ -37,22 +37,20 @@
   display: flex;
   flex-direction: column;
   box-sizing: border-box;
-  width: 370px;
-  height: 620px;
+  width: 31%;
+  margin-bottom: 70px;
 
   background-color: $color-motivation;
 }
 
 .offers__list a:hover {
   outline: 2px solid $color-blue;
-  //border: 2px solid $color-blue;
 }
 
 .offers__list a:focus,
 .offers__list a:active {
   opacity: 0.3;
 }
-
 
 .offers__list li::after {
   content: ">";
@@ -72,12 +70,20 @@
   background-color: $color-blue;
 }
 
-.offers__list h3 {
+.offers__list div {
   position: absolute;
-  top: 29px;
-  left: 42px;
+  top: 0;
+  left: 0;
 
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.offers__list h3 {
   width: 160px;
+  margin-top: 51px;
+  margin-left: 42px;
 
   font-size: 20px;
   line-height: 30px;
@@ -87,117 +93,71 @@
 }
 
 .offers__list img {
-  margin-bottom: -6px;
+  margin-bottom: -4px;
 
   opacity: 0.3;
 }
 
-@include media-desktop {
-  .offers .container {
-    padding-right: 19.64vw;
-    padding-left: 19.64vw;
-  }
-
-  .offers__header {
-    margin-top: 4.84vw;
-    margin-bottom: 0;
-
-    font-size: 1.88vw;
-    line-height: 2.66vw;
-  }
-
-  .offers__list {
-    margin-top: 2.5vw;
-    margin-bottom: 6.61vw;
-  }
-
-  .offers__list li {
-    width: 19.27vw;
-    height: 32.29vw;
-  }
-
-  .offers__list li::after {
-    right: 0;
-    bottom: 0;
-
-    width: 3.28vw;
-    height: 3.28vw;
-  }
-
-  .offers__list h3 {
-    top: 1.51vw;
-    left: 2.19vw;
-
-    width: 8.33vw;
-
-    font-size: 1.04vw;
-    line-height: 1.56vw;
-  }
-
-  .offers__list img {
-    margin-bottom: -0.31vw;
-  }
-}
-
 @include media-tablet {
   .offers .container {
-    padding-right: 1.3vw;//10px;
-    padding-left: 3.26vw;//25px;
+    padding-right: 10px;
+    padding-left: 25px;
   }
 
   .offers__header {
-    width: 80.08vw;//615px;
-    margin-top: 6.25vw;//48px;
+    width: 615px;
+    margin-top: 53px;
     margin-bottom: 0;
+    margin-left: 0;
 
-    font-size: 4.17vw;//32px;
+    font-size: 32px;
     line-height: 140.62%;
   }
 
   .offers__list {
     flex-direction: column;
     justify-content: flex-start;
-    margin-top: 6.64vw;//51px;
-    margin-bottom: 3.91vw;//30px;
+    margin-top: 48px;
+    margin-bottom: 43px;
 
     @include ul-reset();
   }
 
   .offers__list li {
-    width: 93.1vw;//715px;
-    height: 33.33vw;//256px;
-    margin-bottom: 6.12vw;//47px;
+    width: 98.01%;
+    height: auto;
+    min-height: 256px;
+    margin-bottom: 43px;
   }
 
   .offers__list li::after {
     right: 0;
     bottom: 0;
 
-    width: 8.2vw;//63px;
-    height: 8.2vw;//63px;
+    width: 63px;
+    height: 63px;
 
-    font-size: 1.56vw;
+    font-size: 12px;
   }
 
   .offers__list h3 {
-    top: 2.47vw;//19px;
-    left: 5.73vw;//44px;
+    width: 160px;
+    margin-top: 41px;
+    margin-left: 44px;
 
-    width: 20.83vw;//160px;
-
-    font-size: 2.6vw;//20px;
-    line-height: 3.91vw;//30px;
+    font-size: 20px;
+    line-height: 30px;
   }
 
   .offers__list img {
     width: 100%;
-    margin-bottom: -0.78vw;//-6px;
+    margin-bottom: -2px;
   }
 }
 
 @include media-mobile {
   .offers .container {
-    padding-right: 10px;
+    padding-right: 0;
     padding-left: 14px;
   }
 
@@ -215,14 +175,15 @@
     flex-direction: column;
     justify-content: flex-start;
     margin-top: 40px;
-    margin-bottom: 35px;
+    margin-bottom: 37px;
 
     @include ul-reset();
   }
 
   .offers__list li {
-    width: 90.94vw;//291px;
-    height: 80.31vw;//257px;
+    width: 95%;
+    height: auto;
+    min-height: 256px;
     margin-bottom: 29px;
   }
 
@@ -237,10 +198,9 @@
   }
 
   .offers__list h3 {
-    top: 0;
-    left: 37px;
-
     width: 160px;
+    margin-top: 22px;
+    margin-left: 37px;
 
     font-size: 20px;
     line-height: 30px;
@@ -248,5 +208,6 @@
 
   .offers__list img {
     width: 100%;
+    margin-bottom: -1px;
   }
 }

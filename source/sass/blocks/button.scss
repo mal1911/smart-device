@@ -23,24 +23,14 @@
   outline: none;
   opacity: 0.3;
 }
-/*
-@include media-desktop {
-  .button {
-    font-size: 0.73vw;
-    line-height: 0.83vw;
 
-    border: 0.05vw solid $color-white;
-    border-radius: 0.26vw;
-  }
-}
-*/
 @include media-tablet {
   .button {
-    font-size: 1.82vw; //14px;
-    line-height: 2.08vw; //16px;
+    font-size: 14px;
+    line-height: 16px;
 
-    border: 0.13vw solid $color-white;
-    border-radius: 0.65vw; //5px;
+    border: 1px solid $color-white;
+    border-radius: 5px;
 
     @include font-roboto-condensed-bold();
   }

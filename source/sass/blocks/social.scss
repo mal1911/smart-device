@@ -26,25 +26,18 @@
 }
 
 
-@include media-desktop {
-  .social__item:not(:last-child) {
-    margin-right: 0.78vw;
-  }
-
-  .social__item svg {
-    width: 1.41vw;
-    height: 1.41vw;
-  }
-}
-
 @include media-tablet {
+  .social {
+    margin-top: 12px;
+    margin-right: 23px;
+  }
   .social__item:not(:last-child) {
-    margin-right: 1.95vw; //15px;
+    margin-right: 15px;
   }
 
   .social__item svg {
-    width: 3.52vw; //27px;
-    height: 3.52vw; //27px;
+    width: 27px;
+    height: 27px;
   }
 }
 

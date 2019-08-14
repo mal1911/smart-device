@@ -54,6 +54,14 @@
   @include font-pt-mono-regular();
 }
 
+.about__text span:first-child {
+  display: none;
+}
+
+.no-js .about__text span:first-child {
+  display: inline;
+}
+
 .about__button {
   margin-top: 38px;
   margin-bottom: 108px;
@@ -93,11 +101,6 @@
 
     font-size: 32px;
     line-height: 140.62%;
-  }
-
-  .about__block {
-    height: 223px;
-    overflow: hidden;
   }
 
   .about__text {
@@ -140,9 +143,7 @@
   }
 
   .about__block {
-    height: 368px;
     margin-top: 0;
-    overflow: hidden;
   }
 
   .about__text {
@@ -154,7 +155,7 @@
   }
 
   .about__button {
-    margin-top: 30px;
+    margin-top: -12px;
     margin-bottom: 64px;
     margin-left: 1px;
     padding: 14px 50px;

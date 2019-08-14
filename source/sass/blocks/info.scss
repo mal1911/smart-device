@@ -1,10 +1,13 @@
 .info {
+  border-top: 1px solid $color-border;
+}
+
+.info .container {
   display: flex;
   justify-content: space-between;
-  width: 100%;
-  margin-top: 12px;
-
-  border-top: 1px solid $color-border;
+  margin-top: 0;
+  padding-right: 10px;
+  padding-left: 10px;
 }
 
 .info__text {
@@ -19,34 +22,33 @@
   @include font-pt-mono-regular();
 }
 
-@include media-desktop {
-  .info {
-    margin-top: 0.63vw;
-
-    border-top: 0.05vw solid $color-border;
-  }
-
-  .info__text {
-    font-size: 0.68vw;
-    line-height: 1.25vw;
-  }
+.info__text:nth-child(2) {
+  margin-left: 47px;
 }
 
-@include media-tablet {
-  .info.container {
-    margin-top: 1.56vw;//12px;
-    padding-right: 3.26vw;//25px;
-    padding-bottom: 10px;
-    padding-left: 3.26vw;//25px;
+.info__text:nth-child(3) {
+  margin-right: 6px;
+}
 
-    border-top: 0.13vw solid $color-footer-border;
+
+@include media-tablet {
+  .info {
+    padding-bottom: 10px;
   }
 
   .info__text {
-    margin-top: 3.56vw;
+    margin-top: 22px;
 
-    font-size: 1.69vw;//13px;
-    line-height: 3.13vw;//24px;
+    font-size: 13px;
+    line-height: 24px;
+  }
+
+  .info__text:nth-child(2) {
+    margin-left: 12px;
+  }
+
+  .info__text:nth-child(3) {
+    margin-right: 12px;
   }
 
   .info__text:first-child {
@@ -55,12 +57,13 @@
 }
 
 @include media-mobile {
-  .info {
+  .info .container {
     flex-direction: column;
-    justify-content: center;
     align-items: center;
     width: 100%;
-    margin-top: 12px;
+    margin-top: 0;
+    padding-top: 12px;
+    padding-bottom: 12px;
 
     border-top: 1px solid $color-footer-border;
   }
@@ -68,6 +71,16 @@
   .info__text {
     font-size: 13px;
     line-height: 24px;
+  }
+
+  .info__text:nth-child(2) {
+    margin-right: 0;
+    margin-left: 0;
+  }
+
+  .info__text:nth-child(3) {
+    margin-right: 0;
+    margin-left: 0;
   }
 
   .info__text:first-child {
