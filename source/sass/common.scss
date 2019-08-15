@@ -6,36 +6,7 @@ body {
   font-size: 16px;
   line-height: 22px;
   color: $color-text;
-
-  background-color: $color-motivation;
-  background-image: url("../img/background-desktop@1x.png");
-  background-repeat: no-repeat;
-  background-position: top center;
-  background-size: 100% 22%;
-
   @include font-pt-mono-regular();
-
-  @include retina {
-    background-image: url("../img/background-desktop@2x.png");
-  }
-
-  @include media-tablet {
-    background-image: url("../img/background-tablet@1x.png");
-    background-size: 100% 22%;
-
-    @include retina {
-      background-image: url("../img/background-tablet@2x.png");
-    }
-  }
-
-  @include media-mobile {
-    background-image: url("../img/background-mobile@1x.png");
-    background-size: 100% 22%;
-
-    @include retina {
-      background-image: url("../img/background-mobile@2x.png");
-    }
-  }
 }
 
 a {

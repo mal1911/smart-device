@@ -1,3 +1,42 @@
+.motivation::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+
+  height: 875px;
+
+  background-color: $color-motivation;
+  background-image: url("../img/background-desktop@1x.png");
+  background-repeat: no-repeat;
+  background-position: center center;
+
+  @include retina {
+    background-image: url("../img/background-desktop@2x.png");
+  }
+  @include media-tablet {
+    height: 686px;
+
+    background-image: url("../img/background-tablet@1x.png");
+    background-size: cover;
+
+    @include retina {
+      background-image: url("../img/background-tablet@2x.png");
+    }
+  }
+  @include media-mobile {
+    height: 647px;
+
+    background-image: url("../img/background-mobile@1x.png");
+    background-size: cover;
+
+    @include retina {
+      background-image: url("../img/background-mobile@2x.png");
+    }
+  }
+}
+
 .motivation .container {
   position: relative;
 
@@ -118,7 +157,6 @@
   outline: none;
 }
 
-
 @include media-tablet {
   .motivation .container {
     padding-right: 145px;
@@ -134,7 +172,6 @@
       background-position: 0 -60px;
     }
   }
-
 
   .motivation__header {
     margin-top: 108px;
@@ -169,6 +206,12 @@
     padding: 17px 31px;
   }
 
+  @media (min-width: 771px) {
+    .motivation__button {
+      margin-bottom: 205px;
+    }
+  }
+
   .motivation__image {
     top: 32px;
     right: 0;
@@ -198,7 +241,6 @@
       background-position: 0 -60px;
     }
   }
-
 
   .motivation__header {
     margin-top: 219px;
@@ -244,6 +286,12 @@
     line-height: 19px;
 
     border: 1px solid $color-blue;
+  }
+
+  @media (min-width: 378px) {
+    .motivation__button {
+      margin-bottom: 105px;
+    }
   }
 
   .motivation__image {
