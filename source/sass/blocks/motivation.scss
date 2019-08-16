@@ -11,6 +11,7 @@
   background-image: url("../img/background-desktop@1x.png");
   background-repeat: no-repeat;
   background-position: center center;
+  background-size: cover;
 
   @include retina {
     background-image: url("../img/background-desktop@2x.png");
