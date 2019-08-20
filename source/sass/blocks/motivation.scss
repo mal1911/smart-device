@@ -1,41 +1,5 @@
-.motivation::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  right: 0;
-  left: 0;
-
-  height: 875px;
-
+.motivation {
   background-color: $color-motivation;
-  background-image: url("../img/background-desktop@1x.png");
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-size: cover;
-
-  @include retina {
-    background-image: url("../img/background-desktop@2x.png");
-  }
-  @include media-tablet {
-    height: 686px;
-
-    background-image: url("../img/background-tablet@1x.png");
-    background-size: cover;
-
-    @include retina {
-      background-image: url("../img/background-tablet@2x.png");
-    }
-  }
-  @include media-mobile {
-    height: 647px;
-
-    background-image: url("../img/background-mobile@1x.png");
-    background-size: cover;
-
-    @include retina {
-      background-image: url("../img/background-mobile@2x.png");
-    }
-  }
 }
 
 .motivation .container {
@@ -44,7 +8,9 @@
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+  justify-content: center;
   padding-left: 10px;
+  min-height: 764px;
 
   background-image: url("../img/background-desktop.svg");
   background-repeat: no-repeat;
@@ -55,7 +21,7 @@
 .motivation__header {
   z-index: 1;
 
-  margin-top: 204px;
+  margin-top: -72px;
   margin-bottom: 0;
 
   font-size: 80px;
@@ -67,14 +33,23 @@
   @include font-roboto-condensed-bold();
 }
 
+.motivation__block {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
 .motivation__text {
   position: relative;
   z-index: 1;
-
+  max-height: 500px;
+  overflow-y: hidden;
   width: 650px;
   margin-top: 26px;
-  margin-bottom: 0;
-  margin-left: 97px;
+  margin-bottom: 43px;
+  margin-left: 0;
+  padding-left: 98px;
 
   font-size: 22px;
   line-height: 34px;
@@ -84,9 +59,10 @@
 
   &::before {
     content: "";
+
     position: absolute;
     top: 16px;
-    left: -92px;
+    left: 4px;
 
     width: 66px;
     height: 2px;
@@ -101,8 +77,9 @@
 
 .motivation__button {
   z-index: 1;
-
-  margin-top: 43px;
+  max-width: 605px;
+  margin-top: 0;
+  margin-bottom: 0;
   margin-left: 97px;
   padding: 17px 46px;
 
@@ -129,9 +106,9 @@
 }
 
 .motivation__up {
-  margin-top: 133px;
-  margin-bottom: 126px;
-  margin-left: -42px;
+  position: absolute;
+  left: -34px;
+  top: 622px;
 
   font-size: 14px;
   line-height: 16px;
@@ -162,6 +139,7 @@
   .motivation .container {
     padding-right: 145px;
     padding-left: 89px;
+    min-height: 606px;
 
     background-image: url("../img/background-tablet.svg");
     background-position: 0 -100px;
@@ -175,25 +153,33 @@
   }
 
   .motivation__header {
-    margin-top: 108px;
+    margin-top: -57px;
     margin-bottom: 0;
 
     font-size: 60px;
     line-height: 70px;
   }
 
+  @media (min-width: 774px) {
+    .motivation__header {
+      margin-top: 0;
+    }
+  }
+
   .motivation__text {
-    width: 490px;
+    width: auto;
     margin-top: 28px;
-    margin-bottom: 0;
-    margin-left: 50px;
+    margin-bottom: 54px;
+    padding-left: 50px;
+    max-width: 510px;
+    max-height: 197px;
 
     font-size: 18px;
     line-height: 156.8%;
 
     &::before {
       top: 16px;
-      left: -47px;
+      left: 1px;
 
       width: 33px;
       height: 2px;
@@ -201,8 +187,8 @@
   }
 
   .motivation__button {
-    margin-top: 55px;
-    margin-bottom: 162px;
+    margin-top: 0;
+    margin-bottom: 0;
     margin-left: 50px;
     padding: 17px 31px;
   }
@@ -231,6 +217,7 @@
     align-items: center;
     padding-right: 5px;
     padding-left: 15px;
+    min-height: 582px;
 
     background-image: url("../img/background-mobile.svg");
     background-position: 0 -98px;
@@ -244,7 +231,7 @@
   }
 
   .motivation__header {
-    margin-top: 219px;
+    margin-top: 150px;
     margin-bottom: 0;
 
     font-size: 40px;
@@ -253,21 +240,30 @@
 
   .motivation__text {
     width: 230px;
+    max-height: 178px;
     margin-top: 27px;
-    margin-bottom: 0;
-    margin-left: 34px;
+    margin-bottom: 39px;
+    margin-left: 0;
+    padding-left: 51px;
 
     font-size: 16px;
     line-height: 156.8%;
 
     &::before {
       top: 15px;
-      left: -50px;
+      left: 0;
 
       width: 33px;
       height: 2px;
     }
   }
+
+  @media (min-width: 380px) {
+    .motivation__text {
+      width: 300px;
+    }
+  }
+
 
   .motivation__mobile-text {
     display: inline;
@@ -278,9 +274,9 @@
   }
 
   .motivation__button {
-    margin-top: 40px;
-    margin-bottom: 70px;
-    margin-left: -7px;
+    margin-top: 0;
+    margin-bottom: 0;
+    margin-left: 4px;
     padding: 18px 31px;
 
     font-size: 16px;

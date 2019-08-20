@@ -29,7 +29,7 @@
   align-items: flex-start;
   box-sizing: border-box;
   width: 48.7%;
-  min-height: 298px;
+  min-height: 299px;
   margin-bottom: 31px;
   padding-right: 42px;
   padding-left: 42px;
@@ -37,6 +37,7 @@
   background-color: $color-white;
   border: 1px solid $color-border;
   border-left: 3px $color-blue solid;
+  cursor: pointer;
 }
 
 .advantages__item:hover {

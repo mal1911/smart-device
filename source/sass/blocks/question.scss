@@ -79,11 +79,12 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  width: 559px;
+  width: 574px;
   margin-top: 32px;
   margin-bottom: 113px;
 
   background-color: $color-blue;
+  box-sizing: border-box;
 }
 
 .question__form input[type="text"],
@@ -98,6 +99,18 @@
   background-color: #19baff; //$color-blue;
   border: none;
   outline: none;
+  cursor: pointer;
+  @include font-pt-mono-regular();
+}
+
+.question__form input[type="text"]:hover,
+.question__form textarea:hover {
+  border: 2px solid $color-white;
+  padding-left: 21px;
+}
+
+.question__form textarea:hover {
+  padding-top: 12px;
 }
 
 .question__form input[type="text"]::-webkit-input-placeholder,
@@ -131,15 +144,13 @@
 .question__form input[type="text"] {
   width: 270px;
   height: 50px;
-
-  @include font-pt-mono-regular();
 }
 
 .question__form input[type="checkbox"] + label {
   position: relative;
-
-  width: 223px;
-  margin-top: 55px;
+  padding-left: 33px;
+  width: 229px;
+  margin-top: 52px;
   margin-left: 10px;
 
   font-size: 14px;
@@ -151,8 +162,8 @@
   &::before {
     content: "";
     position: absolute;
-    top: 0;
-    left: -33px;
+    top: 2px;
+    left: 0;
 
     width: 16px;
     height: 16px;
@@ -302,7 +313,7 @@
   }
 
   .question .container {
-    padding-right: 10px;
+    padding-right: 14px;
     padding-left: 14px;
 
     &::before {
@@ -351,16 +362,17 @@
   }
 
   .question__form input[type="checkbox"] + label {
-    width: 223px;
+    width: auto;
+    min-width: 223px;
     margin-top: 31px;
-    margin-left: 34px;
+    margin-left: 0;
 
     font-size: 14px;
     line-height: 16px;
 
     &::before {
       top: 0;
-      left: -33px;
+      left: 0;
 
       width: 16px;
       height: 16px;

@@ -31,7 +31,8 @@
 
 @media (max-width: 1600px) {
   .footer__center {
-    margin-right: 250px;
+    margin-right: 280px;
+    margin-left: 50px;
   }
 }
 
@@ -64,6 +65,30 @@
 @media (max-width: 1600px) {
   .footer__desctiption {
     left: 16.5%;
+  }
+}
+
+@media (min-width: 2200px) {
+  .footer__desctiption {
+    left: 32vw;
+  }
+}
+
+@media (min-width: 3000px) {
+  .footer__desctiption {
+    left: 37vw;
+  }
+}
+
+@media (min-width: 4000px) {
+  .footer__desctiption {
+    left: 40vw;
+  }
+}
+
+@media (min-width: 5700px) {
+  .footer__desctiption {
+    display: none;
   }
 }
 
@@ -149,6 +174,7 @@
 
   .footer__center {
     margin-right: 0;
+    margin-left: 0;
   }
 
   .footer__last {

@@ -87,7 +87,7 @@
       width: 180px;
       height: 362px;
 
-      background-image: url("../img/about-tablet.png");
+      background-image: url("../img/about-tablet@1x.png");
 
       @include retina {
         background-image: url("../img/about-tablet@2x.png");

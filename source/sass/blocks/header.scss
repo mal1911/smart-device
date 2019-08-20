@@ -1,6 +1,48 @@
 .header {
-  background-color: transparent;
+  background-color: $color-motivation;
+  z-index: 1;
 }
+
+.header::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+
+  height: 875px;
+  z-index: 0;
+
+  background-image: url("../img/background-desktop@1x.png");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+
+  @include retina {
+    background-image: url("../img/background-desktop@2x.png");
+  }
+  @include media-tablet {
+    height: 686px;
+
+    background-image: url("../img/background-tablet@1x.png");
+    background-size: cover;
+
+    @include retina {
+      background-image: url("../img/background-tablet@2x.png");
+    }
+  }
+  @include media-mobile {
+    height: 647px;
+
+    background-image: url("../img/background-mobile@1x.png");
+    background-size: cover;
+
+    @include retina {
+      background-image: url("../img/background-mobile@2x.png");
+    }
+  }
+}
+
 
 .header .container {
   display: flex;
@@ -21,6 +63,7 @@
   align-items: center;
   width: 356px;
   padding-right: 10px;
+  z-index: 1;
 }
 
 .header__logo {

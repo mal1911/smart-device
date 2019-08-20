@@ -1,5 +1,7 @@
 .social {
   display: flex;
+  flex-wrap: wrap;
+  max-width: 214px;
 
   @include ul-reset();
 }
@@ -46,6 +48,7 @@
 @include media-mobile {
   .social {
     margin-top: 19px;
+    max-width: 295px;
   }
 
   .social__item:not(:last-child) {

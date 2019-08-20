@@ -66,6 +66,18 @@
   background-color: #19baff; //$color-blue;
   border: none;
   outline: none;
+  cursor: pointer;
+  @include font-pt-mono-regular();
+}
+
+.modal__form input[type="text"]:hover,
+.modal__form textarea:hover {
+  border: 2px solid $color-white;
+  padding-left: 21px;
+}
+
+.modal__form textarea:hover {
+  padding-top: 12px;
 }
 
 .modal__form input[type="text"]::-webkit-input-placeholder,
@@ -100,8 +112,6 @@
   width: 100%;
   height: 50px;
   margin-bottom: 32px;
-
-  @include font-pt-mono-regular();
 }
 
 .modal__form input[type="checkbox"] + label {
@@ -110,7 +120,8 @@
   align-self: flex-start;
   width: 310px;
   margin-top: 35px;
-  margin-left: 47px;
+  margin-left: 1px;
+  padding-left: 47px;
 
   font-size: 14px;
   line-height: 16px;
@@ -122,7 +133,7 @@
     content: "";
     position: absolute;
     top: 0;
-    left: -47px;
+    left: 0;
 
     width: 16px;
     height: 16px;
@@ -168,7 +179,6 @@
 .modal__form button:focus {
   outline: none;
 }
-
 
 .modal__form textarea {
   width: 100%;

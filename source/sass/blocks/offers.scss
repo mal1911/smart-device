@@ -5,14 +5,14 @@
 .offers .container {
   display: flex;
   flex-direction: column;
-  padding-right: 123px;
-  padding-left: 123px;
+  padding-right: 136px;
+  padding-left: 136px;
 }
 
 .offers__header {
   margin-top: 93px;
   margin-bottom: 0;
-  margin-left: 10px;
+  margin-left: 0;
 
   font-size: 36px;
   line-height: 51px;
@@ -24,9 +24,9 @@
 .offers__list {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-around;
+  justify-content: flex-start;
   margin-top: 48px;
-  margin-bottom: 57px;
+  margin-bottom: 54px;
 
   @include ul-reset();
 }
@@ -37,13 +37,17 @@
   display: flex;
   flex-direction: column;
   box-sizing: border-box;
-  width: 31%;
+  width: 31.5%;
   margin-bottom: 70px;
-
+  margin-right: 2.75%;
   background-color: $color-motivation;
 }
 
-.offers__list a:hover {
+.offers__list li:nth-child(3n) {
+  margin-right: 0;
+}
+
+.offers__list a:hover div {
   outline: 2px solid $color-blue;
 }
 
@@ -56,7 +60,7 @@
 }
 
 .offers__list li::after {
-  content: ">";
+  content: "";
   position: absolute;
   right: 0;
   bottom: 0;
@@ -71,6 +75,12 @@
   color: $color-white;
 
   background-color: $color-blue;
+
+  background-image: url("../img/angle.svg");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 6px 9px;
+
 }
 
 .offers__list div {
@@ -81,9 +91,11 @@
   width: 100%;
   height: 100%;
   overflow: hidden;
+  background-color: rgba(27, 45, 55, 0.7);
 }
 
 .offers__list h3 {
+  z-index: 2;
   width: 160px;
   margin-top: 51px;
   margin-left: 42px;
@@ -96,14 +108,8 @@
 }
 
 .offers__list img {
-  margin-bottom: -6px;
-  opacity: 0.3;
-}
-
-@media (min-width: 1050px) {
-  .offers__list img {
-    margin-bottom: -5px;
-  }
+  width: 100%;
+  height: 100%;
 }
 
 @include media-tablet {
@@ -126,7 +132,7 @@
     flex-direction: column;
     justify-content: flex-start;
     margin-top: 48px;
-    margin-bottom: 31px;
+    margin-bottom: 40px;
 
     @include ul-reset();
   }
@@ -159,18 +165,18 @@
 
   .offers__list img {
     width: 100%;
-    margin-bottom: -5px;
+    //margin-bottom: -5px;
   }
 }
 
 @include media-mobile {
   .offers .container {
-    padding-right: 0;
+    padding-right: 14px;
     padding-left: 14px;
   }
 
   .offers__header {
-    width: 290px;
+    //width: 290px;
     margin-top: 50px;
     margin-bottom: 0;
     margin-left: 10px;
@@ -183,17 +189,20 @@
     flex-direction: column;
     justify-content: flex-start;
     margin-top: 40px;
-    margin-bottom: 22px;
+    margin-bottom: 35px;
 
     @include ul-reset();
   }
 
   .offers__list li {
-    width: 95%;
+    width: 100%;
     height: auto;
     min-height: 256px;
-    margin-bottom: 29px;
+    margin-bottom: 23px;
+    margin-right: 0;
   }
+
+
 
   .offers__list li::after {
     right: 0;
@@ -214,8 +223,11 @@
     line-height: 30px;
   }
 
+  /*
   .offers__list img {
     width: 100%;
-    margin-bottom: -5px;
+    height: auto;
+    //margin-bottom: -5px;
   }
+  */
 }
