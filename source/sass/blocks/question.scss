@@ -87,6 +87,13 @@
   box-sizing: border-box;
 }
 
+@media (max-width: 1060px) {
+  .question__form {
+    width: 560px;
+  }
+}
+
+
 .question__form input[type="text"],
 .question__form textarea {
   box-sizing: border-box;
@@ -156,6 +163,7 @@
   font-size: 14px;
   line-height: 16px;
   color: $color-white;
+  cursor: pointer;
 
   @include font-pt-mono-regular();
 
@@ -173,6 +181,15 @@
     background-position: center;
   }
 }
+
+.question__form input[type="checkbox"] + label:hover {
+  opacity: 0.6;
+}
+
+.question__form input[type="checkbox"] + label:active {
+  opacity: 0.3;
+}
+
 
 .question__form input[type="checkbox"]:checked + label::before {
   background-image: url("../img/question-check-on.svg");
@@ -281,7 +298,7 @@
 
     &::before {
       top: 0;
-      left: -33px;
+      left: 0;
 
       width: 16px;
       height: 16px;
@@ -355,6 +372,13 @@
     font-size: 16px;
     line-height: 22px;
   }
+
+
+  .question__form input[type="text"]:hover,
+  .question__form textarea:hover {
+    padding-left: 18px;
+  }
+
 
   .question__form input[type="text"] {
     width: 100%;

@@ -6,6 +6,8 @@
   display: flex;
   justify-content: space-between;
   margin-top: 0;
+  padding-top: 15px;
+  padding-bottom: 15px;
   padding-right: 10px;
   padding-left: 10px;
 }
@@ -22,6 +24,14 @@
   @include font-pt-mono-regular();
 }
 
+.info__text:hover {
+  opacity: 0.8;
+}
+
+.info__text:active {
+  opacity: 0.3;
+}
+
 .info__text:nth-child(2) {
   margin-left: 47px;
 }
@@ -32,8 +42,9 @@
 
 
 @include media-tablet {
-  .info {
-    padding-bottom: 10px;
+  .info .container {
+    padding-top: 0;
+    padding-bottom: 15px;
   }
 
   .info__text {
@@ -69,6 +80,7 @@
   }
 
   .info__text {
+    margin-top: 17px;
     font-size: 13px;
     line-height: 24px;
   }

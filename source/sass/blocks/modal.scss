@@ -126,6 +126,7 @@
   font-size: 14px;
   line-height: 16px;
   color: $color-white;
+  cursor: pointer;
 
   @include font-pt-mono-regular();
 
@@ -143,6 +144,16 @@
     background-position: center;
   }
 }
+
+
+.modal__form input[type="checkbox"] + label:hover {
+  opacity: 0.6;
+}
+
+.modal__form input[type="checkbox"] + label:active {
+  opacity: 0.3;
+}
+
 
 .modal__form input[type="checkbox"]:checked + label::before {
   background-image: url("../img/question-check-on.svg");

@@ -26,6 +26,7 @@
 @media (max-width: 1919px) {
   .footer__center {
     margin-right: 370px;
+    margin-left: 80px;
   }
 }
 
@@ -46,7 +47,7 @@
 
 .footer__desctiption {
   position: absolute;
-  bottom: 0;
+  bottom: 15px;
   left: 24.8%;
 
   width: 240px;
@@ -61,6 +62,16 @@
 
   @include font-pt-mono-regular();
 }
+
+
+.footer__desctiption:hover {
+  opacity: 0.8;
+}
+
+.footer__desctiption:active {
+  opacity: 0.3;
+}
+
 
 @media (max-width: 1600px) {
   .footer__desctiption {
@@ -182,7 +193,7 @@
   }
 
   .footer__social {
-    margin-top: 48px;
+    margin-top: 31px;
   }
 
   .footer__desctiption {
