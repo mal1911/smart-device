@@ -18,10 +18,19 @@
   background-size: auto;
 }
 
+.motivation__block {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  min-height: 363px;
+}
+
+
 .motivation__header {
   z-index: 1;
 
-  margin-top: -72px;
+  margin-top: 0;
   margin-bottom: 0;
 
   font-size: 80px;
@@ -33,12 +42,6 @@
   @include font-roboto-condensed-bold();
 }
 
-.motivation__block {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: flex-start;
-}
 
 .motivation__text {
   position: relative;
@@ -47,7 +50,7 @@
   overflow-y: hidden;
   width: 650px;
   margin-top: 26px;
-  margin-bottom: 43px;
+  margin-bottom: 45px;
   margin-left: 0;
   padding-left: 98px;
 
@@ -137,7 +140,7 @@
 
 @include media-tablet {
   .motivation .container {
-    padding-right: 145px;
+    padding-right: 190px;
     padding-left: 89px;
     min-height: 606px;
 
@@ -152,8 +155,12 @@
     }
   }
 
+  .motivation__block {
+    min-height: 400px;
+  }
+
   .motivation__header {
-    margin-top: -57px;
+    margin-top: 0;
     margin-bottom: 0;
 
     font-size: 60px;
@@ -168,7 +175,7 @@
 
   .motivation__text {
     width: auto;
-    margin-top: 28px;
+    margin-top: 33px;
     margin-bottom: 54px;
     padding-left: 50px;
     max-width: 510px;
@@ -229,6 +236,7 @@
       background-position: 0 -60px;
     }
   }
+
 
   .motivation__header {
     margin-top: 150px;
