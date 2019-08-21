@@ -44,8 +44,13 @@
   @include font-roboto-condensed-regular();
 }
 
+.about__block {
+  max-width: 100%;
+  word-wrap: break-word;
+}
+
+
 .about__text {
-  max-width: 1000px;
   margin-top: 20px;
   margin-bottom: 0;
 
@@ -53,20 +58,6 @@
   line-height: 22px;
 
   @include font-pt-mono-regular();
-}
-
-@media (max-width: 1600px) {
-  .about__text {
-    max-width: 800px;
-  }
-
-}
-
-@media (max-width: 1300px) {
-  .about__text {
-    max-width: 500px;
-  }
-
 }
 
 .about__text span:first-child {
