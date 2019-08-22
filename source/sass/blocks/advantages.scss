@@ -33,8 +33,8 @@
   margin-bottom: 31px;
   padding-right: 42px;
   padding-left: 42px;
-  word-wrap: break-word;
 
+  word-wrap: break-word;
 
   background-color: $color-white;
   border: 1px solid $color-border;
@@ -187,8 +187,8 @@
     flex-direction: column;
     flex-wrap: nowrap;
     align-items: center;
-    margin-top: 35px;
     width: 100%;
+    margin-top: 35px;
   }
 
   .advantages__item {
@@ -244,13 +244,12 @@
   }
 
   .advantages__text {
+    max-width: 100%;
     margin-top: 10px;
     margin-bottom: 10px;
 
-    max-width: 100%;
-    word-wrap: break-word;
-
     font-size: 16px;
     line-height: 22px;
+    word-wrap: break-word;
   }
 }

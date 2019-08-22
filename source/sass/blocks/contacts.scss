@@ -24,6 +24,7 @@
 
 .contacts__item {
   max-width: 350px;
+
   opacity: 0.5;
 }
 
@@ -78,9 +79,10 @@
 
   .contacts__item,
   .contacts__link {
+    max-width: 350px;
+
     font-size: 15px;
     line-height: 25px;
-    max-width: 350px;
   }
 }
 
@@ -113,9 +115,9 @@
 
   .contacts__item,
   .contacts__link {
-    font-size: 15px;
-    line-height: 25px;
     max-width: 200px;
 
+    font-size: 15px;
+    line-height: 25px;
   }
 }

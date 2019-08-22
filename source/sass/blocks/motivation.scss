@@ -8,9 +8,10 @@
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  justify-content: center;
-  padding-left: 10px;
   min-height: 764px;
+  padding-left: 10px;
+
+  vertical-align: center;
 
   background-image: url("../img/background-desktop.svg");
   background-repeat: no-repeat;
@@ -24,13 +25,15 @@
   justify-content: flex-start;
   align-items: flex-start;
   min-height: 363px;
+  margin-top: auto;
+  margin-bottom: auto;
 }
 
 
 .motivation__header {
   z-index: 1;
 
-  margin-top: 0;
+  margin-top: 2px;
   margin-bottom: 0;
 
   font-size: 80px;
@@ -46,13 +49,14 @@
 .motivation__text {
   position: relative;
   z-index: 1;
-  max-height: 500px;
-  overflow-y: hidden;
+
   width: 650px;
+  max-height: 500px;
   margin-top: 26px;
   margin-bottom: 45px;
   margin-left: 0;
   padding-left: 98px;
+  overflow-y: hidden;
 
   font-size: 22px;
   line-height: 34px;
@@ -62,7 +66,6 @@
 
   &::before {
     content: "";
-
     position: absolute;
     top: 16px;
     left: 4px;
@@ -80,6 +83,7 @@
 
 .motivation__button {
   z-index: 1;
+
   max-width: 605px;
   margin-top: 0;
   margin-bottom: 0;
@@ -110,8 +114,8 @@
 
 .motivation__up {
   position: absolute;
-  left: -34px;
   top: 622px;
+  left: -34px;
 
   font-size: 14px;
   line-height: 16px;
@@ -140,9 +144,9 @@
 
 @include media-tablet {
   .motivation .container {
+    min-height: 606px;
     padding-right: 190px;
     padding-left: 89px;
-    min-height: 606px;
 
     background-image: url("../img/background-tablet.svg");
     background-position: 0 -103px;
@@ -160,7 +164,7 @@
   }
 
   .motivation__header {
-    margin-top: 0;
+    margin-top: 4px;
     margin-bottom: 0;
 
     font-size: 60px;
@@ -175,11 +179,11 @@
 
   .motivation__text {
     width: auto;
-    margin-top: 33px;
-    margin-bottom: 54px;
-    padding-left: 50px;
     max-width: 510px;
     max-height: 197px;
+    margin-top: 29px;
+    margin-bottom: 54px;
+    padding-left: 50px;
 
     font-size: 18px;
     line-height: 156.8%;
@@ -222,9 +226,9 @@
 @include media-mobile {
   .motivation .container {
     align-items: center;
+    min-height: 582px;
     padding-right: 5px;
     padding-left: 15px;
-    min-height: 582px;
 
     background-image: url("../img/background-mobile.svg");
     background-position: 0 -98px;

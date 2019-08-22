@@ -79,12 +79,12 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+  box-sizing: border-box;
   width: 574px;
   margin-top: 32px;
   margin-bottom: 113px;
 
   background-color: $color-blue;
-  box-sizing: border-box;
 }
 
 @media (max-width: 1060px) {
@@ -107,13 +107,15 @@
   border: none;
   outline: none;
   cursor: pointer;
+
   @include font-pt-mono-regular();
 }
 
 .question__form input[type="text"]:hover,
 .question__form textarea:hover {
-  border: 2px solid $color-white;
   padding-left: 21px;
+
+  border: 2px solid $color-white;
 }
 
 .question__form textarea:hover {
@@ -155,14 +157,16 @@
 
 .question__form input[type="checkbox"] + label {
   position: relative;
-  padding-left: 33px;
+
   width: 229px;
   margin-top: 52px;
   margin-left: 10px;
+  padding-left: 33px;
 
   font-size: 14px;
   line-height: 16px;
   color: $color-white;
+
   cursor: pointer;
 
   @include font-pt-mono-regular();

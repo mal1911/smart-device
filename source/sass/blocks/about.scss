@@ -4,10 +4,11 @@
 
 .about .container {
   position: relative;
-  box-sizing: border-box;
+
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+  box-sizing: border-box;
   padding-right: 145px;
   padding-left: 315px;
 
@@ -46,6 +47,7 @@
 
 .about__block {
   max-width: 100%;
+
   word-wrap: break-word;
 }
 
@@ -110,12 +112,12 @@
   }
 
   .about__text {
+    min-width: 560px;
     margin-top: 24px;
     margin-bottom: 0;
 
     font-size: 16px;
     line-height: 22px;
-    min-width: 560px;
   }
 
   .about__button {
@@ -154,9 +156,10 @@
   }
 
   .about__text {
+    max-width: 100%;
     margin-top: 20px;
     margin-bottom: 41px;
-    max-width: 100%;
+
     font-size: 16px;
     line-height: 22px;
   }

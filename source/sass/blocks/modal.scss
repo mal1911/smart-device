@@ -67,13 +67,15 @@
   border: none;
   outline: none;
   cursor: pointer;
+
   @include font-pt-mono-regular();
 }
 
 .modal__form input[type="text"]:hover,
 .modal__form textarea:hover {
-  border: 2px solid $color-white;
   padding-left: 21px;
+
+  border: 2px solid $color-white;
 }
 
 .modal__form textarea:hover {
@@ -126,6 +128,7 @@
   font-size: 14px;
   line-height: 16px;
   color: $color-white;
+
   cursor: pointer;
 
   @include font-pt-mono-regular();

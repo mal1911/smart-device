@@ -1,6 +1,7 @@
 .header {
-  background-color: $color-motivation;
   z-index: 1;
+
+  background-color: $color-motivation;
 }
 
 .header::before {
@@ -9,9 +10,9 @@
   top: 0;
   right: 0;
   left: 0;
+  z-index: 0;
 
   height: 875px;
-  z-index: 0;
 
   background-image: url("../img/background-desktop@1x.png");
   background-repeat: no-repeat;
@@ -57,13 +58,14 @@
 }
 
 .header__left {
+  z-index: 1;
+
   display: flex;
   flex-shrink: 1;
   justify-content: space-between;
   align-items: center;
   width: 356px;
   padding-right: 10px;
-  z-index: 1;
 }
 
 .header__logo {
