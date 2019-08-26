@@ -285,7 +285,7 @@
           <li class="site-parts__item">
             <a href="#" class="site-parts__link">Монтаж печатных плат</a>
           </li>
-          <li class="site-parts__item--break"></li>
+          <li class="site-parts__item site-parts__item--break"></li>
           <li class="site-parts__item">
             <a href="#" class="site-parts__link">Комплектующие</a>
           </li>
@@ -302,7 +302,7 @@
         <button type="button" class="toggle toggle&#45;&#45;closed"></button>
         <ul class="contacts__list">
           <li class="contacts__item">
-            г. Мытищи, Олимпийский проспект, д.10
+            <p class="contacts__text">г. Мытищи, Олимпийский проспект, д.10</p>
           </li>
           <li class="contacts__item">
             <a href="tel:+74955894050" class="contacts__link">+7 (495) 589-40-50</a>
@@ -331,7 +331,7 @@
     <p class="modal__text">Оставьте контакты, мы проконсультируем вас бесплатно в удобное время</p>
     <form class="modal__form" action="https://echo.htmlacademy.ru" method="post">
       <input type="text" required name="name" placeholder="Имя" autocomplete="off" pattern="[-zA-Zа-яА-ЯёЁ ]+">
-      <input type="text" required name="phone" placeholder="Телефон" autocomplete="off"
+      <input id="phone-modal" type="text" required name="phone" placeholder="Телефон" autocomplete="off"
              pattern="\+7 \(\d{3}\) \d{3}-\d{4}">
       <textarea name="question" placeholder="Ваш вопрос" autocomplete="off" required></textarea>
       <button type="submit">Отправить</button>
@@ -343,6 +343,7 @@
 </section>
 <div class="overlay"></div>
 
+<script src="js/phone-mask.js"></script>
 <script src="js/picturefill.min.js"></script>
 <script src="js/closest-polifill.js"></script>
 <script src="js/main.js"></script>

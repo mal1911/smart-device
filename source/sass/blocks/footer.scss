@@ -58,6 +58,9 @@
   letter-spacing: 0.04em;
 
   opacity: 0.5;
+  transition-property: opacity;
+  transition-duration: 500ms;
+
 
   @include font-pt-mono-regular();
 }

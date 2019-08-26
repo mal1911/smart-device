@@ -17,6 +17,11 @@
   cursor: pointer;
 }
 
+.social__item a {
+  transition-property: opacity;
+  transition-duration: 500ms;
+}
+
 .social__item a:hover {
   opacity: 0.6;
 }

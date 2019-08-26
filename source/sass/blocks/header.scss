@@ -85,6 +85,8 @@
 
 .header__button {
   padding: 13px 26px;
+  max-width: 200px;
+  overflow-x: hidden;
 }
 
 .header__menu-button {
@@ -99,6 +101,9 @@
   background-size: contain;
   border: none;
   cursor: pointer;
+  transition-property: opacity;
+  transition-duration: 500ms;
+
 
   &:hover {
     opacity: 0.6;

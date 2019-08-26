@@ -12,6 +12,9 @@
   border-radius: 5px;
 
   @include font-roboto-condensed-bold();
+
+  transition-property: opacity;
+  transition-duration: 500ms;
 }
 
 .button:hover {

@@ -40,6 +40,10 @@
   border: 1px solid $color-border;
   border-left: 3px $color-blue solid;
   cursor: pointer;
+
+  transition-property: background-color;
+  transition-duration: 500ms;
+
 }
 
 .advantages__item:hover {

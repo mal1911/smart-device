@@ -106,6 +106,8 @@
   border: none;
   outline: none;
   cursor: pointer;
+  transition-property: border;
+  transition-duration: 500ms;
 
   @include font-pt-mono-regular();
 }
@@ -167,6 +169,8 @@
   color: $color-white;
 
   cursor: pointer;
+  transition-property: opacity;
+  transition-duration: 500ms;
 
   @include font-pt-mono-regular();
 
@@ -193,7 +197,6 @@
   opacity: 0.3;
 }
 
-
 .question__form input[type="checkbox"]:checked + label::before {
   background-image: url("../img/question-check-on.svg");
 }
@@ -215,6 +218,8 @@
   border: 1px solid $color-white;
   border-radius: 5px;
   cursor: pointer;
+  transition-property: opacity;
+  transition-duration: 500ms;
 
   @include font-roboto-condensed-bold();
 }
@@ -376,12 +381,10 @@
     line-height: 22px;
   }
 
-
   .question__form input[type="text"]:hover,
   .question__form textarea:hover {
     padding-left: 18px;
   }
-
 
   .question__form input[type="text"] {
     width: 100%;

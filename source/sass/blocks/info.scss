@@ -18,6 +18,9 @@
   color: $color-footer-text;
   text-transform: uppercase;
   letter-spacing: 0.04em;
+  transition-property: opacity;
+  transition-duration: 500ms;
+
 
   opacity: 0.5;
 
@@ -36,10 +39,15 @@
   margin-left: 47px;
 }
 
+@media (max-width: 1500px) {
+  .info__text:nth-child(2) {
+    margin-left: 70px;
+  }
+}
+
 .info__text:nth-child(3) {
   margin-right: 6px;
 }
-
 
 @include media-tablet {
   .info .container {
@@ -55,7 +63,7 @@
   }
 
   .info__text:nth-child(2) {
-    margin-left: 12px;
+    margin-left: 18px;
   }
 
   .info__text:nth-child(3) {

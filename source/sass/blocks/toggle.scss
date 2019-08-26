@@ -16,6 +16,8 @@
     border: none;
     cursor: pointer;
 
+    transition-duration: 500ms;
+    transition-property: opacity;
 
     &:hover {
       opacity: 0.6;

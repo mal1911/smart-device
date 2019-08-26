@@ -127,6 +127,10 @@
   cursor: pointer;
   opacity: 0.5;
 
+  transition-property: opacity;
+  transition-duration: 500ms;
+
+
   @include font-pt-mono-regular();
 }
 

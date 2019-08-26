@@ -43,6 +43,9 @@
   line-height: 18px;
   color: $color-white;
 
+  transition-duration: 500ms;
+  transition-property: opacity;
+
   @include font-pt-mono-regular();
 }
 
