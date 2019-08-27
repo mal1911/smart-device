@@ -106,8 +106,6 @@
   border: none;
   outline: none;
   cursor: pointer;
-  transition-property: border;
-  transition-duration: 500ms;
 
   @include font-pt-mono-regular();
 }

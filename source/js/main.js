@@ -78,7 +78,7 @@
   };
 
   var onScrollUpButtonClick = function () {
-    document.querySelector('.advantages').scrollIntoView();
+    document.querySelector('.advantages').scrollIntoView({behavior: 'smooth'});
   };
 
   var onResize = function () {

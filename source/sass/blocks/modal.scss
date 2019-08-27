@@ -13,6 +13,9 @@
 
   background-color: $color-blue;
   transform: translate(-50%, -50%);
+
+
+  transition-duration: 500ms;
 }
 
 .modal--opened {
@@ -67,9 +70,6 @@
   border: none;
   outline: none;
   cursor: pointer;
-
-  transition-property: border;
-  transition-duration: 500ms;
 
 
   @include font-pt-mono-regular();
